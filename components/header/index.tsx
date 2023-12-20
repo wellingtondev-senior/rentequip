@@ -1,5 +1,5 @@
 "use client"
-import useMenuState, { useMenuStateProps } from "@/states/useMenuState";
+import useMenuState, { useMenuStateProps } from "@/store/useMenuState";
 import { HiMenuAlt1 } from "react-icons/hi";
 
 const HeaderComponent = () => {

@@ -4,7 +4,7 @@ import { tv } from 'tailwind-variants'
 
 
 const animateMenu = tv({
-    base: "fixed z-[9] w-[50px]  flex flex-col gap-6 items-center justify-start top-0 bottom-0  bg-sky-800 transition-1 ease-in-out duration-700",
+    base: "fixed z-[10] w-[50px]  flex flex-col gap-6 items-center justify-start top-0 bottom-0  bg-sky-800 transition-1 ease-in-out duration-700",
     variants: {
         open: {
             true: "left-0",

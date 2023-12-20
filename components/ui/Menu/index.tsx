@@ -1,13 +1,19 @@
 import { MenuAction } from "./MenuAction";
 import { MenuButtonTooltip } from "./MenuButtonTooltip";
 import { MenuRoot } from "./MenuRoot";
+import { MenuSubitems } from "./MenuSubitems";
+import { MenuSubitemsRoot } from "./MenuSubitemsRoot";
+import { MenuSubitemsTitulo } from "./MenuSubitemsTitulo";
 
 
 
 export const Menu = {
   Root:MenuRoot, 
   Action:MenuAction,
-  ButtonTooltip:MenuButtonTooltip
+  ButtonTooltip:MenuButtonTooltip,
+  SubitemsRoot:MenuSubitemsRoot,
+  SubitemsTitulo:MenuSubitemsTitulo,
+  Subitems:MenuSubitems
 }
 
 

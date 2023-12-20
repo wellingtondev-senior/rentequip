@@ -6,7 +6,7 @@ export interface useMenuStateProps {
     setVisible: () => void
 }
 const useMenuState = create<useMenuStateProps>((set) => ({
-    visible: false,
+    visible: true,
     setVisible: () => set((state) => (
             { 
                 visible: !state.visible,
