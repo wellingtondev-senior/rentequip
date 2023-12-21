@@ -169,12 +169,10 @@ export function TabelaLocacao() {
                         <TableCell>{invoice.cliente}</TableCell>
                         <TableCell>{invoice.statusLocacao}</TableCell>
                         <TableCell className="text-center">{invoice.valor}</TableCell>
-                        <TableCell className="text-center">
-                            <div className=" flex items-center justify-center gap-2">
-                                <Button background="sky" icon={FaRegFilePdf} />
-                                <Button background="green" icon={IoIosEye} />
-                                <Button background="red" icon={AiOutlineDelete} />
-                            </div>
+                        <TableCell className="text-center flex gap-2 items-center justify-center">
+                                <Button tooltip="Visualizar o Contrato" background="sky" icon={FaRegFilePdf} />
+                                <Button tooltip="Ver detalhes" background="green" icon={IoIosEye} />
+                                <Button tooltip="Deletar informação" background="red" icon={AiOutlineDelete} />
                         </TableCell>
                     </TableRow>
                 ))}

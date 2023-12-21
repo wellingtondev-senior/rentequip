@@ -1,6 +1,7 @@
 import { ButtonHTMLAttributes, ElementType } from "react";
 import { tv, VariantProps } from "tailwind-variants";
 import { IconButton } from "../IconButton";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../tooltip";
 
 // Defina 'item' antes da interface 'ButtonProps'
 const button = tv({
@@ -31,18 +32,29 @@ interface ButtonProps extends VariantProps<typeof button> {
     onTap?: () => void;
     iconSize?:"sm" | "md" | "lg";
     iconFill?:"orange" | "sky" | "gray"
+    tooltip:string
 
 }
 
 // Restante do código
-const Button = ({ iconFill, size, iconSize, background, onTap, children, icon, ...props }: ButtonProps) => {
+const Button = ({ tooltip,iconFill, size, iconSize, background, onTap, children, icon, ...props }: ButtonProps) => {
 
     return (
-        <button className={button({ background, size })} onClick={onTap} {...props}>
+        <TooltipProvider>
+            <Tooltip>
+                <TooltipTrigger asChild>
+                <button className={button({ background, size })} onClick={onTap} {...props}>
         { icon ? <IconButton iconSize={iconSize} icon={icon} iconFill={iconFill} />:<></>}
         {children ? <span>{children}</span> :<></>} 
         </button>
+                </TooltipTrigger>
+                <TooltipContent>
+                    {tooltip}
+                </TooltipContent>
+            </Tooltip>
+        </TooltipProvider>
     );
 }
 
 export default Button;
+
