@@ -6,7 +6,7 @@ import Providers from '@/util/provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Rentequip - ',
+  title: 'Rentequip - Ferramenta de Gestão de Locação de Equipamentos',
   description: 'Maximize seu Potencial Financeiro: Renda Master - Sua Via para Lucrar Revendendo Produtos Digitais!',
 }
 

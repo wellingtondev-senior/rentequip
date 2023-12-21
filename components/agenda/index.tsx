@@ -62,7 +62,7 @@ export default function AgendaComponent() {
             </div>;
         } else {
              return (
-                <PopoverComponent evento={event.event}/>
+                <PopoverComponent evento={event?.event}/>
              );
            
         }

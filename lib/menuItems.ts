@@ -18,7 +18,7 @@ export const subMenuData = (item:string)=>{
             page: "/agenda"
         },
         {
-            label: "Minha Agenda",
+            label: "Reserva de Equipamento",
             page: "/agenda"
         },
 

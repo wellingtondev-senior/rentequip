@@ -4,10 +4,10 @@ import SideBar from "../SideBar";
 
 const DashboardLayout = ({ children }: { children: ReactNode }) => {
     return (
-        <section className="w-full h-auto bg-slate-100">
+        <section className="w-full min-h-screen bg-slate-100">
             <HeaderComponent />
            <SideBar/>
-            <article className="p-10">
+            <article className="max-sm:p-2 p-10">
                 {children}
             </article>
         </section>

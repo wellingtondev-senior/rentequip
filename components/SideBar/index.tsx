@@ -11,6 +11,10 @@ import { SubMenu, subMenuData } from "@/lib/menuItems";
 import { FaUsers } from "react-icons/fa";
 import { CiBoxes } from "react-icons/ci";
 import { FaPeopleCarryBox } from "react-icons/fa6";
+import { BsFileEarmarkPdf } from "react-icons/bs";
+import { SlCreditCard } from "react-icons/sl";
+import { SiApachekafka } from "react-icons/si";
+
 
 const SideBar = () => {
     const router = useRouter();
@@ -49,15 +53,19 @@ const SideBar = () => {
                 <Menu.ButtonTooltip label="Clientes" onAction={() => setOpenSubItems("Clientes")} buttonIcon={FaUsers} />
                 <Menu.ButtonTooltip label="Estoque" onAction={() => setOpenSubItems("Estoque")} buttonIcon={CiBoxes} />
                 <Menu.ButtonTooltip label="Equipamentos" onAction={() => setOpenSubItems("Equipamentos")} buttonIcon={FaPeopleCarryBox } />
-                <Menu.ButtonTooltip label="Contratos" onAction={() => setOpenSubItems("Clientes")} buttonIcon={FaUsers} />
-
+                <Menu.ButtonTooltip label="Contratos" onAction={() => setOpenSubItems("Contratos")} buttonIcon={BsFileEarmarkPdf } />
+                <Menu.ButtonTooltip label="Fatuas" onAction={() => setOpenSubItems("Faturas")} buttonIcon={SlCreditCard} />
+                <Menu.ButtonTooltip label="Integrações" onAction={() => setOpenSubItems("Integracao")} buttonIcon={SiApachekafka } />
             </Menu.Root>
             <Menu.SubitemsRoot openSubItems={subMenuState.visible}>
                 <Menu.SubitemsTitulo label={items.toUpperCase()} color="sky" />
                 {
                     menuItems.map((e, i) => (
                         <div key={i}>
-                            <Menu.Subitems label={e.label} icon={IoIosArrowDropleft} page={e.page} />
+                            <Menu.Subitems 
+                            label={e.label} 
+                            icon={IoIosArrowDropleft} 
+                            page={e.page} />
                         </div>))
                 }
             </Menu.SubitemsRoot>
