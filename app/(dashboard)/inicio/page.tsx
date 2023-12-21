@@ -1,5 +1,4 @@
 import DashboardLayout from "@/components/layout/dashboardLayout";
-import { ClienteTable } from "@/components/tables/cliente";
 import { Card } from "@/components/ui/card";
 import { TabelaLocacao } from "./tabelaLocacao";
 
