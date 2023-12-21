@@ -16,7 +16,8 @@ const button = tv({
             purple:"bg-purple-600"
         },
         size: {
-            sm: "h-8 w-8"
+            sm: "h-8 w-8",
+            full:"w-full h-8"
         },
     },
     defaultVariants: {

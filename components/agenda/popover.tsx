@@ -12,7 +12,7 @@ export function PopoverComponent({ evento }: PopoverComponentProps) {
     return (
         <HoverCard>
             <HoverCardTrigger>
-                <Button tooltip='evento'>{evento.title}</Button>
+                <Button size="full" tooltip='evento'>{evento.title}</Button>
             </HoverCardTrigger>
             <HoverCardContent className="w-80 shadow-2xl">
                 <div className="flex flex-col p-4">
